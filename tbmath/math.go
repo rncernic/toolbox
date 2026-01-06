@@ -17,6 +17,11 @@ func Floor[T Number](x T) T {
 	}
 }
 
+// IntFloor returns Floor as integer
+func IntFloor[T Number](x T) int {
+	return int(Floor(x))
+}
+
 // Ceil returns the smallest integer value ≥ x.
 // For integer inputs, it returns x unchanged.
 func Ceil[T Number](x T) T {
