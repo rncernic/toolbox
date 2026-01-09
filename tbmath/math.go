@@ -210,3 +210,7 @@ func Mod[X Number, M Number](x X, m M) X {
 		panic("tbmath.Mod: unsupported type")
 	}
 }
+
+func Atan2Deg(y, x float64) float64 {
+	return math.Atan2(y*DegToRad, x*DegToRad) * RadToDeg
+}
