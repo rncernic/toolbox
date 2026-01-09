@@ -146,13 +146,6 @@ func Mod[X Number, M Number](x X, m M) X {
 		r := xv - mv*math.Floor(xv/mv)
 		return X(r)
 
-	// case int:
-	// 	r := xv % int(mx)
-	// 	if r < 0 {
-	// 		r += int(mx)
-	// 	}
-	// 	return X(r)
-
 	case int:
 		mv := int(mx)
 		r := xv % mv
