@@ -204,6 +204,21 @@ func Mod[X Number, M Number](x X, m M) X {
 	}
 }
 
+func SinDeg[T Number](x T) float64 {
+	sin := math.Sin(float64(x) * DegToRad)
+	return sin
+}
+
+func CosDeg[T Number](x T) float64 {
+	cos := math.Cos(float64(x) * DegToRad)
+	return cos
+}
+
+func TanDeg[T Number](x T) float64 {
+	tan := math.Tan(float64(x) * DegToRad)
+	return tan
+}
+
 func Atan2Deg[T Number](y, x T) T {
 	angleRad := math.Atan2(float64(y), float64(x))
 	return T(angleRad * RadToDeg)
