@@ -4,6 +4,24 @@ import (
 	"math"
 )
 
+const (
+	// Degrees to radians
+	DegToRad = math.Pi / 180
+	// Radians to degrees
+	RadToDeg = 180 / math.Pi
+)
+
+// Signum returns the sign of number
+func Signum[X Signed | Float](x X) X {
+	if x > 0 {
+		return X(1)
+	} else if x == 0 {
+		return X(0)
+	} else {
+		return X(-1)
+	}
+}
+
 // Floor returns the greatest integer value ≤ x.
 // For integer inputs, it returns x unchanged.
 func Floor[T Number](x T) T {
